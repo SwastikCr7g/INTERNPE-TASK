@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My E-Commerce</title>
+
+    <!-- Bootstrap & Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="website.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <a class="navbar-brand" href="#">GenZ-Cart</a>
+
+        <form class="form-inline mx-auto search-bar">
+            <input class="form-control mr-2 w-75" type="search" placeholder="Search products...">
+            <button class="btn btn-warning" type="submit">Search</button>
+        </form>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto text-white">
+                <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Orders</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#cartModal">
+                        <i class="fas fa-shopping-cart"></i> Cart (<span id="cart-count">0</span>)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center text-white">
+        <h1>Welcome GenZ-Cart</h1>
+        <p>Find the best GenZ generation deals on your favorite products</p>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="product-grid container my-5">
+        <div class="row">
+            <!-- Example Product -->
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src= "bat.jpg" alt="Product 1" width="120" height="100">
+                    
+                    <h5>CRICKET BAT</h5>
+                    <p>Rs 2000</p>
+                    <button class="btn btn-primary btn-block" onclick="addToCart('CRICKET BAT', 2000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="shoes1.jpg" alt="Product 2">
+                    <h5>SHOES</h5>
+                    <p>Rs 3000</p>
+                    <button class="btn btn-primary btn-block" onclick="addToCart('SHOES', 3000)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="shirt.jpg" alt="Product 3">
+                    <h5>SHIRT</h5>
+                    <p>Rs 999</p>
+                    <button class="btn btn-primary btn-block" onclick="addToCart('SHIRT', 999)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="product-card">
+                    <img src="football.jpg" alt="Product 4">
+                    <h5>FOOTBALL</h5>
+                    <p>Rs 1500</p>
+                    <button class="btn btn-primary btn-block" onclick="addToCart('FOOTBALL', 1500)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center text-white py-4">
+        <p>&copy; 2025 GenZ-Cart. All rights reserved.</p>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Shopping Cart</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <ul id="cart-list" class="list-unstyled"></ul>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+                    <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="website.js"></script>
+</body>
+</html>
