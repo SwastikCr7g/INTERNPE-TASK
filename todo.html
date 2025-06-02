@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced Dark Theme To-Do List</title>
+  <link rel="stylesheet" href="todo.css" />
+</head>
+<body>
+  <header>
+    <h1><b> DO IT ✅</b></h1>
+   
+  </header>
+
+  <main>
+    <div class="todo-container">
+      <div class="input-group">
+        <input type="text" id="task-input" placeholder="Add a new task..." />
+        <select id="priority-select" title="Select Priority">
+          <option value="low">Low Priority</option>
+          <option value="medium" selected>Medium Priority</option>
+          <option value="high">High Priority</option>
+        </select>
+        <button id="add-task-btn">Add</button>
+      </div>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="pending">Pending</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button id="clear-completed-btn">Clear Completed</button>
+      </div>
+
+      <ul id="task-list"></ul>
+
+      <p id="task-count"></p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DO IT APP</p>
+  </footer>
+
+  <script src="todo.js"></script>
+</body>
+</html>
